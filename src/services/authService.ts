@@ -7,7 +7,7 @@
  */
 
 import axios from 'axios';
-import { SpotifyAuthResponse, User } from '../types';
+import type { User } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
 
@@ -86,16 +86,19 @@ class AuthService {
       this.accessToken = accessToken;
       this.refreshToken = refreshToken;
       this.tokenExpiry = Date.now() + expiresIn * 1000;
-      this.user = {
+
+      const userWithTokens: User = {
         ...user,
         accessToken,
         refreshToken,
         tokenExpiry: this.tokenExpiry,
       };
 
+      this.user = userWithTokens;
+
       this.saveToStorage();
 
-      return this.user;
+      return userWithTokens;
     } catch (error) {
       console.error('Callback error:', error);
       throw error;

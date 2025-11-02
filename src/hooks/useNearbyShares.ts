@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { subscribeToNearbyShares } from '../services/firestoreService';
-import { MusicShare, Location } from '../types';
+import type { MusicShare, Location } from '../types';
 
 export const useNearbyShares = (location: Location | null, radiusInKm: number = 5) => {
   const [shares, setShares] = useState<MusicShare[]>([]);

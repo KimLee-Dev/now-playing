@@ -6,7 +6,7 @@
  */
 
 import geohash from 'ngeohash';
-import { Location } from '../types';
+import type { Location } from '../types';
 
 /**
  * 현재 사용자 위치 가져오기

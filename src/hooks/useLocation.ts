@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getCurrentLocation, watchLocation, stopWatchingLocation } from '../services/geolocationService';
-import { Location } from '../types';
+import type { Location } from '../types';
 
 export const useLocation = (watch: boolean = false) => {
   const [location, setLocation] = useState<Location | null>(null);

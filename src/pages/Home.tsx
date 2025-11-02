@@ -4,7 +4,7 @@ import { useLocation } from '../hooks/useLocation';
 import { useNearbyShares } from '../hooks/useNearbyShares';
 import { getCurrentlyPlaying } from '../services/spotifyService';
 import { addMusicShare } from '../services/firestoreService';
-import { SpotifyTrack } from '../types';
+import type { SpotifyTrack } from '../types';
 
 export const Home = () => {
   const { user, isAuthenticated, logout } = useAuth();

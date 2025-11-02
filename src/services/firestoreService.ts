@@ -17,7 +17,7 @@ import {
   QueryConstraint,
 } from 'firebase/firestore';
 import { db } from '../config/firebase';
-import { MusicShare } from '../types';
+import type { MusicShare } from '../types';
 import { getGeohashRange } from './geolocationService';
 
 const MUSIC_SHARES_COLLECTION = 'musicShares';
