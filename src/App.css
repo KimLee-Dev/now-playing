@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1db954 0%, #191414 100%);
+}
+
+.login-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+}
+
+.login-card h1 {
+  color: #191414;
+  margin-bottom: 1rem;
+}
+
+.login-card p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.login-button {
+  background: #1db954;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background: #1ed760;
+}
+
+/* Loading & Callback */
+.loading,
+.callback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  color: #1db954;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-info button {
+  background: #191414;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.user-info button:hover {
+  background: #333;
+}
+
+/* Sections */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #191414;
+}
+
+/* Current Track */
+.track-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.track-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.track-info {
+  flex: 1;
+  text-align: left;
+}
+
+.track-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.track-info p {
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.track-info .album {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.track-card button {
+  background: #1db954;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.track-card button:hover:not(:disabled) {
+  background: #1ed760;
+}
+
+.track-card button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Location */
+.location p {
+  color: #666;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+/* Nearby Shares */
+.shares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.share-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.share-card:hover {
+  transform: translateY(-5px);
+}
+
+.share-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.share-info {
+  padding: 1rem;
+}
+
+.share-info h4 {
+  margin-bottom: 0.5rem;
+  color: #191414;
+}
+
+.share-info p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.share-info .username {
+  font-weight: bold;
+  color: #1db954;
+}
+
+.share-info .time {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.share-info a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1db954;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.share-info a:hover {
+  text-decoration: underline;
+}
